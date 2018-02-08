@@ -169,10 +169,10 @@ if [ "$CHECK" = true ]; then
   python3 gatorgrader/gatorgrader.py --nowelcome --directories src/www \
                                      --checkfiles travels.html --fragments "<time>" --fragmentcounts 2
   determine_exit_code $?
-# --> GatorGrader CHECK: the reflection contains at least 4 paragraphs with 3 sentences each
+  # --> GatorGrader CHECK: the reflection contains at least 4 paragraphs with 3 sentences each
   python3 gatorgrader/gatorgrader.py --nowelcome --directories writing --checkfiles reflection.md --paragraphs 1 --sentences 3
   determine_exit_code $?
-    # --> GatorGrader CHECK: the repository contains at least five commits (update to current + 5)
+  # --> GatorGrader CHECK: the repository contains at least five commits (update to current + 5)
   python3 gatorgrader/gatorgrader.py --nowelcome --commits 5
   determine_exit_code $?
   echo ""
